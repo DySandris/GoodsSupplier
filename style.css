@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* HOMEPAGE SPLIT SCREEN */
+.split-screen {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.panel {
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.left {
+  background-color: #0e8a55; /* Green for Local */
+}
+
+.right {
+  background-color: #003366; /* Blue for International */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
+.btn {
+  background-color: white;
+  color: #0e8a55;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e7e7e7;
+}
+
+.btn.alt {
+  color: #003366;
+}
+
+/* HEADER + PRODUCT LAYOUT */
+.main-header {
+  background-color: #0e8a55;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.global-header {
+  background-color: #003366;
+}
+
+.global-header h1 {
+  color: #ffffff;
+}
+
+.store-layout {
+  display: flex;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 220px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-right: 1px solid #ccc;
+}
+
+.product-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.product-card button {
+  margin-top: 10px;
+  background-color: #0e8a55;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* LOGIN & REGISTER */
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.auth-container form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.auth-container button {
+  background-color: #0e8a55;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - GoodsSupplier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<script>
+// ✅ Updated login check
+const isUserLoggedIn = localStorage.getItem("goodsSupplierUserLoggedIn");
+if (!isUserLoggedIn) {
+  alert("❌ Access denied. Please login first.");
+  window.location.href = "login.html";
+}
+</script>
+
+<header class="main-header">
+  <h1>🛒 Your Cart - GoodsSupplier</h1>
+  <button onclick="logout()" style="background: #fff; color: #0e8a55; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer;">Logout</button>
+</header>
+
+<div class="auth-container">
+  <div id="cart-items"></div>
+  <h3 id="total">Total: Rs 0</h3>
+  <button onclick="clearCart()" style="margin-top: 10px;">Clear Cart</button>
+</div>
+
+<script>
+// ✅ Load cart items
+const cartData = JSON.parse(localStorage.getItem("goodsCart")) || [];
+const cartContainer = document.getElementById("cart-items");
+const totalTag = document.getElementById("total");
+
+let total = 0;
+
+if (cartData.length === 0) {
+  cartContainer.innerHTML = "<p>No items in cart.</p>";
+} else {
+  cartData.forEach(item => {
+    const div = document.createElement("div");
+    div.innerHTML = `<p><strong>${item.name}</strong> – Rs ${item.price}</p>`;
+    cartContainer.appendChild(div);
+    total += item.price;
+  });
+  totalTag.innerText = "Total: Rs " + total;
+}
+
+// ✅ Clear cart function
+function clearCart() {
+  localStorage.removeItem("goodsCart");
+  window.location.reload();
+}
+
+// ✅ Logout function
+function logout() {
+  localStorage.removeItem("goodsSupplierUserLoggedIn");
+  alert("👋 You’ve been logged out!");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

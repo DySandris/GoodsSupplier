@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - GoodsSupplier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Login to GoodsSupplier</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const loginEmail = document.getElementById("loginEmail").value;
+      const loginPassword = document.getElementById("loginPassword").value;
+
+      const savedUser = JSON.parse(localStorage.getItem("goodsSupplierUser"));
+
+      if (savedUser && savedUser.email === loginEmail && savedUser.password === loginPassword) {
+        localStorage.setItem("goodsSupplierUserLoggedIn", "true"); // ✅ Now marking user as logged in
+        alert("✅ Login successful! Redirecting...");
+        window.location.href = "pakistani.html";
+      } else {
+        alert("❌ Invalid email or password!");
+      }
+    });
+  </script>
+</body>
+</html>

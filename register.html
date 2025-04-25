@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - GoodsSupplier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Create Your Account</h2>
+    <form id="registerForm">
+      <input type="text" id="businessName" placeholder="Business Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+  
+      const business = document.getElementById("businessName").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+  
+      // ✅ Password strength check
+      const isStrong = password.length >= 6 && /[a-zA-Z]/.test(password) && /[0-9]/.test(password);
+  
+      if (!isStrong) {
+        alert("❌ Password must be at least 6 characters long and include both letters and numbers.");
+        return;
+      }
+  
+      const user = {
+        business,
+        email,
+        password
+      };
+  
+      localStorage.setItem("goodsSupplierUser", JSON.stringify(user));
+      alert("✅ Account created successfully! Redirecting to login...");
+      window.location.href = "login.html";
+    });
+  </script>
+  </body>
+  </html>
+  

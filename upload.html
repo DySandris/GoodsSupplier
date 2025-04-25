@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Products - GoodsSupplier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <h2>📤 Upload New Product</h2>
+    <form id="uploadForm">
+      <input type="text" id="productName" placeholder="Product Name" required />
+      <input type="number" id="productPrice" placeholder="Price in Rs" required />
+      <input type="url" id="productImage" placeholder="Image URL" required />
+      <button type="submit">Upload Product</button>
+    </form>
+
+    <hr style="margin: 30px 0;"/>
+
+    <h3>📦 Uploaded Products</h3>
+    <div id="productPreview"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("uploadForm");
+    const preview = document.getElementById("productPreview");
+
+    // Load existing products from localStorage
+    const existingProducts = JSON.parse(localStorage.getItem("uploadedProducts")) || [];
+
+    function displayProducts() {
+      preview.innerHTML = "";
+      existingProducts.forEach(prod => {
+        const div = document.createElement("div");
+        div.style.marginBottom = "20px";
+        div.innerHTML = `
+          <img src="${prod.image}" style="max-width:100px; border-radius:6px;" /><br/>
+          <strong>${prod.name}</strong><br/>
+          Rs ${prod.price}
+        `;
+        preview.appendChild(div);
+      });
+    }
+
+    displayProducts();
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("productName").value;
+      const price = parseInt(document.getElementById("productPrice").value);
+      const image = document.getElementById("productImage").value;
+
+      const product = { name, price, image };
+      existingProducts.push(product);
+      localStorage.setItem("uploadedProducts", JSON.stringify(existingProducts));
+
+      alert("✅ Product uploaded successfully!");
+      displayProducts();
+      form.reset();
+    });
+  </script>
+</body>
+</html>

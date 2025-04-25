@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pakistani - Local Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<script>
+  const isUserLoggedIn = localStorage.getItem("goodsSupplierUserLoggedIn");
+  if (!isUserLoggedIn) {
+    alert("❌ Access denied. Please login first.");
+    window.location.href = "login.html";
+  }
+</script>
+
+<header class="main-header global-header">
+  <h1>🇵🇰 Be Pakistani, Buy Pakistani</h1>
+  <a href="cart.html" style="color: white; text-decoration: underline;">🛒 View Cart</a> |
+  <button onclick="logout()" style="margin-left: 10px; background: #fff; color: #003366; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer;">Logout</button>
+</header>
+
+<div class="store-layout">
+  <aside class="sidebar">
+    <h3>Filters</h3>
+    <label><input type="checkbox" /> Pakistani Snacks</label><br/>
+    <label><input type="checkbox" /> Beverages</label><br/>
+    <label><input type="checkbox" /> Clothing & Apparel</label><br/>
+    <label><input type="checkbox" /> Under Rs 1000</label>
+  </aside>
+
+  <main class="product-grid">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="Kurkure" />
+      <h4>Kurkure (Pakistan)</h4>
+      <p>Rs 150</p>
+      <button onclick="addToCart('Kurkure (Pakistan)', 150)">Add to Cart</button>
+    </div>
+  </main>
+</div>
+
+<script>
+  function addToCart(name, price) {
+    const existing = JSON.parse(localStorage.getItem("goodsCart")) || [];
+    existing.push({ name, price });
+    localStorage.setItem("goodsCart", JSON.stringify(existing));
+    alert("✅ " + name + " added to cart!");
+  }
+
+  function logout() {
+    localStorage.removeItem("goodsSupplierUserLoggedIn");
+    alert("👋 You have been logged out!");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

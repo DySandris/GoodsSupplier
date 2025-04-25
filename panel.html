@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - GoodsSupplier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- 🔐 Lock Screen -->
+  <div id="lockScreen" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#f4f7fa;display:flex;align-items:center;justify-content:center;z-index:9999;">
+    <div style="background:white;padding:40px;border-radius:12px;box-shadow:0 0 25px rgba(0,0,0,0.1);width:300px;text-align:center;">
+      <h3 style="margin-bottom:20px;color:#2e7d32;">🔐 Admin Login</h3>
+      <input type="password" id="adminPinInput" placeholder="Enter PIN" style="width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;" />
+      <button onclick="checkPin()" style="margin-top:15px;padding:10px 20px;background:#2e7d32;color:white;border:none;border-radius:6px;cursor:pointer;">Unlock</button>
+      <p id="pinError" style="color:red;font-size:13px;display:none;margin-top:10px;">❌ Incorrect PIN</p>
+    </div>
+  </div>
+
+  <div class="admin-wrapper">
+    <h2>🛠 Admin Panel - Upload Product</h2>
+    <form id="adminForm">
+      <input type="text" id="productName" placeholder="Product Name" required />
+      <input type="number" id="productPrice" placeholder="Price" required />
+      <input type="text" id="productCategory" placeholder="Category" required />
+      <input type="text" id="productSection" placeholder="Section" required />
+      <input type="text" id="productRating" placeholder="Rating (Optional)" />
+      <input type="text" id="productImages" placeholder="Image URLs (comma separated)" required />
+      <label style="margin-top:10px;">
+        <input type="checkbox" id="isBestSeller" />
+        Mark as Best Seller
+      </label>
+      <button type="submit" style="margin-top:10px;">Upload Product</button>
+    </form>
+
+    <!-- 🔍 Search & Filter -->
+    <div style="margin: 30px 0;">
+      <input type="text" id="searchInput" oninput="renderTable(this.value)" placeholder="🔎 Search products..." style="width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;" />
+      <select id="categoryFilter" onchange="renderTable(searchInput.value)" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+        <option value="">🔍 Filter by Category</option>
+      </select>
+    </div>
+
+    <!-- 📊 Dashboard -->
+    <h3 style="color:#2e7d32">📊 Dashboard Overview</h3>
+    <canvas id="categoryChart" height="120"></canvas>
+    <p>Total Products: <strong id="totalCount">0</strong></p>
+    <p>Best Sellers: <strong id="bestCount">0</strong></p>
+
+    <!-- 🔗 Links -->
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="products.html" style="display:inline-block;padding:10px 20px;background:#2e7d32;color:white;text-decoration:none;border-radius:8px;">📦 View All Products</a>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+      <button onclick="clearAllProducts()" style="padding:10px 20px;background:#e53935;color:white;border:none;border-radius:8px;cursor:pointer;">🧹 Clear All Products</button>
+    </div>
+
+    <!-- 🖼 Image Preview -->
+    <div class="image-list" id="previewImages" style="margin-top: 20px;"></div>
+
+    <!-- 📝 Preview Table -->
+    <table id="previewTable" style="width: 100%; margin-top: 30px; border-collapse: collapse; font-size: 14px;">
+      <thead>
+        <tr style="background-color: #e8f5e9;">
+          <th style="padding:10px;border:1px solid #ccc;">Name</th>
+          <th style="padding:10px;border:1px solid #ccc;">Price</th>
+          <th style="padding:10px;border:1px solid #ccc;">Category</th>
+          <th style="padding:10px;border:1px solid #ccc;">Section</th>
+          <th style="padding:10px;border:1px solid #ccc;">Best Seller</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- 📜 Script Section -->
+  <script>
+    const ADMIN_PIN = "furqansarwardanish";
+    let attempts = 0;
+
+    function checkPin() {
+      const enteredPin = document.getElementById("adminPinInput").value;
+      const errorMsg = document.getElementById("pinError");
+
+      if (enteredPin === ADMIN_PIN) {
+        document.getElementById("lockScreen").style.display = "none";
+        errorMsg.style.display = "none";
+      } else {
+        attempts++;
+        errorMsg.style.display = "block";
+        if (attempts >= 5) {
+          alert("🚫 Too many incorrect attempts!");
+          location.reload();
+        }
+      }
+    }
+
+    document.getElementById("productImages")?.addEventListener("input", function () {
+      const container = document.getElementById("previewImages");
+      container.innerHTML = "";
+      const urls = this.value.split(",").map(url => url.trim());
+      urls.forEach(url => {
+        if (url) {
+          const img = document.createElement("img");
+          img.src = url;
+          img.style.margin = "10px";
+          img.style.maxWidth = "100px";
+          img.style.borderRadius = "8px";
+          container.appendChild(img);
+        }
+      });
+    });
+
+    function updateDashboard(products) {
+      const total = products.length;
+      const best = products.filter(p => p.bestSeller).length;
+      document.getElementById("totalCount").innerText = total;
+      document.getElementById("bestCount").innerText = best;
+
+      const categoryMap = {};
+      products.forEach(p => {
+        categoryMap[p.category] = (categoryMap[p.category] || 0) + 1;
+      });
+
+      const ctx = document.getElementById("categoryChart").getContext("2d");
+      if (window.categoryChart) window.categoryChart.destroy();
+      window.categoryChart = new Chart(ctx, {
+        type: "pie",
+        data: {
+          labels: Object.keys(categoryMap),
+          datasets: [{
+            label: "Products by Category",
+            data: Object.values(categoryMap),
+            backgroundColor: ["#66bb6a", "#42a5f5", "#ffa726", "#ab47bc"]
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { position: "bottom" } }
+        }
+      });
+    }
+
+    function renderPreviewTable() {
+      const products = JSON.parse(localStorage.getItem("adminUploadedProducts")) || [];
+      const tbody = document.querySelector("#previewTable tbody");
+      tbody.innerHTML = "";
+
+      products.forEach(product => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td style="padding:10px;border:1px solid #ccc;">${product.name}</td>
+          <td style="padding:10px;border:1px solid #ccc;">Rs ${product.price}</td>
+          <td style="padding:10px;border:1px solid #ccc;">${product.category}</td>
+          <td style="padding:10px;border:1px solid #ccc;">${product.section}</td>
+          <td style="padding:10px;border:1px solid #ccc;">${product.bestSeller ? "✅" : "❌"}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    function populateCategoryFilter(products) {
+      const filter = document.getElementById("categoryFilter");
+      const seen = new Set();
+      filter.innerHTML = `<option value="">🔍 Filter by Category</option>`;
+
+      products.forEach(p => {
+        if (!seen.has(p.category)) {
+          seen.add(p.category);
+          const option = document.createElement("option");
+          option.value = p.category;
+          option.textContent = p.category;
+          filter.appendChild(option);
+        }
+      });
+    }
+
+    function clearAllProducts() {
+      if (confirm("Are you sure you want to delete all uploaded products?")) {
+        localStorage.removeItem("adminUploadedProducts");
+        updateDashboard([]);
+        populateCategoryFilter([]);
+        renderPreviewTable();
+        alert("🧹 All products cleared!");
+      }
+    }
+
+    document.getElementById("adminForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const product = {
+        name: document.getElementById("productName").value,
+        price: parseInt(document.getElementById("productPrice").value),
+        category: document.getElementById("productCategory").value,
+        section: document.getElementById("productSection").value,
+        rating: document.getElementById("productRating").value,
+        images: document.getElementById("productImages").value.split(",").map(url => url.trim()),
+        bestSeller: document.getElementById("isBestSeller").checked
+      };
+
+      const products = JSON.parse(localStorage.getItem("adminUploadedProducts")) || [];
+      products.push(product);
+      localStorage.setItem("adminUploadedProducts", JSON.stringify(products));
+
+      alert("✅ Product uploaded!");
+      this.reset();
+      document.getElementById("previewImages").innerHTML = "";
+      updateDashboard(products);
+      populateCategoryFilter(products);
+      renderPreviewTable();
+    });
+
+    const stored = JSON.parse(localStorage.getItem("adminUploadedProducts")) || [];
+    updateDashboard(stored);
+    populateCategoryFilter(stored);
+    renderPreviewTable();
+  </script>
+
+</body>
+</html>

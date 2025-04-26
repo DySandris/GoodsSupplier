@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="auth-container">
-    <h2>Login to GoodsSupplier</h2>
+    <h2>🔐 Login to GoodsSupplier</h2>
     <form id="loginForm">
       <input type="email" id="loginEmail" placeholder="Email" required />
       <input type="password" id="loginPassword" placeholder="Password" required />
@@ -26,9 +26,9 @@
       const savedUser = JSON.parse(localStorage.getItem("goodsSupplierUser"));
 
       if (savedUser && savedUser.email === loginEmail && savedUser.password === loginPassword) {
-        localStorage.setItem("goodsSupplierUserLoggedIn", "true"); // ✅ Now marking user as logged in
+        localStorage.setItem("goodsSupplierUserLoggedIn", "true");
         alert("✅ Login successful! Redirecting...");
-        window.location.href = "pakistani.html";
+        window.location.href = "panel.html"; // change destination if needed
       } else {
         alert("❌ Invalid email or password!");
       }

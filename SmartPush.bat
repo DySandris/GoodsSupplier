@@ -15,7 +15,7 @@ $iconPath = Join-Path $PWD 'goodslogo.ico'; ^
 $notify = New-Object System.Windows.Forms.NotifyIcon; ^
 $notify.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($iconPath); ^
 $notify.BalloonTipTitle = 'GoodsSupplier'; ^
-$notify.BalloonTipText = '✅ Deployed Successfully!'; ^
+$notify.BalloonTipText = ' Deployed Successfully!'; ^
 $notify.Visible = $true; ^
 $notify.ShowBalloonTip(3000); ^
 Start-Sleep -Seconds 4; ^

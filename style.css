@@ -166,3 +166,177 @@ p {
   text-decoration: none;
   font-weight: bold;
 }
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.split-screen {
+  display: flex;
+  height: calc(100vh - 80px); /* Full height minus header */
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.left {
+  background-color: #e6f2e6; /* Light green */
+}
+
+.right {
+  background-color: #e6f0ff; /* Light blue */
+}
+
+.panel h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.panel p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0e8a55;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0c7045;
+}
+
+.btn.alt {
+  background-color: #003366;
+}
+
+.btn.alt:hover {
+  background-color: #002244;
+}
+.site-footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  margin: 0;
+}
+.hero-section {
+  position: relative;
+  height: 90vh;
+  background: url('your-background-image.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background: #0e8a55;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #0c7045;
+}
+
+.frequently-searched {
+  margin-top: 20px;
+}
+
+.frequently-searched span {
+  display: inline-block;
+  background: #ffffff33;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 14px;
+}

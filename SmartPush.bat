@@ -7,8 +7,8 @@ git push
 
 echo ✅ Done! Your site is deploying live on Netlify...
 
-:: Show popup with logo (PowerShell)
-powershell -ExecutionPolicy Bypass -Command ^
+:: Show popup with logo (PowerShell forced)
+%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -Command ^
 "Add-Type -AssemblyName System.Windows.Forms; ^
  Add-Type -AssemblyName System.Drawing; ^
  $iconPath = Join-Path $PWD 'goodslogo.ico'; ^
@@ -16,9 +16,9 @@ powershell -ExecutionPolicy Bypass -Command ^
  $notify.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($iconPath); ^
  $notify.BalloonTipTitle = 'GoodsSupplier'; ^
  $notify.BalloonTipText = '✅ Deployed Successfully!'; ^
- $notify.Visible = \$true; ^
+ $notify.Visible = $true; ^
  $notify.ShowBalloonTip(3000); ^
  Start-Sleep -Seconds 4; ^
- $notify.Dispose()"
+ $notify.Dispose();"
 
 pause

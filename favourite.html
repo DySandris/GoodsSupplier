@@ -1,72 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Favourites - GoodsSupplier</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    .product {
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin: 10px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    img {
-      width: 100px;
-      height: auto;
-    }
-    button {
-      background-color: crimson;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="favourite.css">
 </head>
 <body>
-  <h1>My Favourite Products ❤️</h1>
-  <div id="favourites-list"></div>
 
-  <script>
-    const favContainer = document.getElementById('favourites-list');
-    const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+  <header class="main-header">
+    <h1>❤️ My Favorites - GoodsSupplier</h1>
+    <a href="pakistani.html" style="display: inline-block; margin-top: 10px; background: #0e8a55; color: #fff; padding: 10px 20px; border-radius: 4px; text-decoration: none;">⬅️ Back to Store</a>
+  </header>
 
-    function renderFavourites() {
-      favContainer.innerHTML = '';
-      if (favourites.length === 0) {
-        favContainer.innerHTML = '<p>No favourite products saved.</p>';
-        return;
-      }
+  <main class="favorites-container" id="favorites-list">
+    <!-- Favorite products will appear here dynamically -->
+  </main>
 
-      favourites.forEach((product, index) => {
-        const div = document.createElement('div');
-        div.className = 'product';
-        div.innerHTML = `
-          <div>
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>Price: ${product.price}</p>
-          </div>
-          <button onclick="removeFavourite(${index})">Remove Favorite</button>
-        `;
-        favContainer.appendChild(div);
-      });
-    }
+  <script src="favourite.js"></script>
 
-    function removeFavourite(index) {
-      favourites.splice(index, 1);
-      localStorage.setItem('favourites', JSON.stringify(favourites));
-      renderFavourites();
-    }
-
-    renderFavourites();
-  </script>
 </body>
 </html>

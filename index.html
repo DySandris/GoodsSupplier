@@ -32,6 +32,25 @@
 
   <section class="hero-section">
     <div class="hero-overlay"></div>
+
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="delivery.jpg" alt="delivery man" class="active">
+        <img src="agriculture.jpg" alt="agriculture area">
+        <img src="craftman.jpg" alt="craftman skill">
+        <img src="localshop.jpg" alt="local shop in pakistan">
+        <img src="import.jpg" alt="imported container">
+        <img src="meeting.jpg" alt="business team meeting">
+      </div>
+    </div>
+    <!-- Arrows -->
+<button class="prev">&#10094;</button>
+<button class="next">&#10095;</button>
+
+<!-- Dots -->
+<div class="carousel-dots"></div>
+
+
     <div class="hero-content">
       <h1>The Leading B2B Platform for Pakistani Trade</h1>
       <div class="search-bar">
@@ -57,6 +76,75 @@
     </div>
     <p class="footer-text">© 2025 GoodsSupplier. Empowering Local and Global Trade.</p>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide img');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+
+    const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dotsContainer = document.querySelector('.carousel-dots');
+
+// Create dots
+slides.forEach((slide, index) => {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  dot.addEventListener('click', () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+  });
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    dots[i].classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+      dots[i].classList.add('active');
+    }
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+// Initialize
+showSlide(currentSlide);
+setInterval(nextSlide, 10000);
+
+    // Initialize
+    showSlide(currentSlide);
+    setInterval(nextSlide, 4000);
+  </script>
 
 </body>
 </html>

@@ -18,12 +18,10 @@
 </head>
 
 <body>
-</div>
 
 <header class="site-header">
   <div class="logo-container">
     <img src="goodssupplierlogo.png" alt="GoodsSupplier Logo" class="site-logo">
-    <div class="logo-text">GoodsSupplier</div>
   </div>
   <nav class="nav-links">
     <a href="index.html">Home</a>
@@ -32,20 +30,9 @@
     <a href="cart.html">Cart</a>
     <a href="favourite.html">Favourites</a>
   </nav>
-  <nav class="secondary-menu">
-    <a href="#">☰ All Categories</a>
-    <a href="#">Featured selections</a>
-    <a href="#">Order protections</a>
-    <a href="#">AI Sourcing Agent</a>
-    <a href="#">Buyer Central</a>
-    <a href="#">Help Center</a>
-    <a href="#">Get the app</a>
-    <a href="#">Become a supplier</a>
-  </nav>
 </header>
 
-
-  <!-- Secondary Menu -->
+<!-- Secondary Menu -->
 <nav class="secondary-menu">
   <a href="#">☰ All Categories</a>
   <a href="#">Featured selections</a>
@@ -57,120 +44,103 @@
   <a href="#">Become a supplier</a>
 </nav>
 
-
-
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-
-    <div class="carousel-container">
-      <div class="carousel-slide">
-        <img src="delivery.jpg" alt="delivery man" class="active">
-        <img src="agriculture.jpg" alt="agriculture area">
-        <img src="craftman.jpg" alt="craftman skill">
-        <img src="localshop.jpg" alt="local shop in pakistan">
-        <img src="import.jpg" alt="imported container">
-        <img src="meeting.jpg" alt="business team meeting">
-      </div>
+<section class="hero-section">
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="delivery.jpg" alt="Delivery Man" class="active">
+      <img src="agriculture.jpg" alt="Agriculture Area">
+      <img src="craftman.jpg" alt="Craftman Skill">
+      <img src="localshop.jpg" alt="Local Shop in Pakistan">
+      <img src="import.jpg" alt="Imported Container">
+      <img src="meeting.jpg" alt="Business Team Meeting">
     </div>
-    <!-- Arrows -->
-<button class="prev">&#10094;</button>
-<button class="next">&#10095;</button>
+  </div>
 
-<!-- Dots -->
-<div class="carousel-dots"></div>
+  <div class="hero-overlay"></div>
 
+  <!-- Arrows -->
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
 
-    <div class="hero-content">
-      <h1>The Leading B2B Platform for Pakistani Trade</h1>
-      <div class="search-bar">
-        <input type="text" placeholder="Search for products...">
-        <button>Search</button>
-      </div>
-      <div class="frequently-searched">
-        <span>hoodies</span>
-        <span>t-shirts</span>
-        <span>custom mugs</span>
-        <span>stationery</span>
-      </div>
+  <!-- Dots -->
+  <div class="carousel-dots"></div>
+
+  <div class="hero-content">
+    <h1>The Leading B2B Platform for Pakistani Trade</h1>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products...">
+      <button>Search</button>
     </div>
-  </section>
 
-  <footer class="site-footer">
-    <div class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="pakistani.html">Pakistani</a> |
-      <a href="dysandris.html">DySandris</a> |
-      <a href="cart.html">Cart</a> |
-      <a href="favourite.html">Favourites</a>
+    <div class="frequently-searched">
+      <span>hoodies</span>
+      <span>t-shirts</span>
+      <span>custom mugs</span>
+      <span>stationery</span>
     </div>
-    <p class="footer-text">© 2025 GoodsSupplier. Empowering Local and Global Trade.</p>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    const slides = document.querySelectorAll('.carousel-slide img');
-    let currentSlide = 0;
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a> |
+    <a href="pakistani.html">Pakistani</a> |
+    <a href="dysandris.html">DySandris</a> |
+    <a href="cart.html">Cart</a> |
+    <a href="favourite.html">Favourites</a>
+  </div>
+  <p class="footer-text">© 2025 GoodsSupplier. Empowering Local and Global Trade.</p>
+</footer>
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-          slide.classList.add('active');
-        }
-      });
-    }
+<script>
+  const slides = document.querySelectorAll('.carousel-slide img');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  const dotsContainer = document.querySelector('.carousel-dots');
+  let currentSlide = 0;
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
+  // Create dots
+  slides.forEach((slide, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    dot.addEventListener('click', () => {
+      currentSlide = index;
       showSlide(currentSlide);
-    }
+    });
+    dotsContainer.appendChild(dot);
+  });
 
+  const dots = document.querySelectorAll('.dot');
 
-    const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-const dotsContainer = document.querySelector('.carousel-dots');
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      dots[i].classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+        dots[i].classList.add('active');
+      }
+    });
+  }
 
-// Create dots
-slides.forEach((slide, index) => {
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
-  dot.addEventListener('click', () => {
-    currentSlide = index;
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-  });
-  dotsContainer.appendChild(dot);
-});
+  }
 
-const dots = document.querySelectorAll('.dot');
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    dots[i].classList.remove('active');
-    if (i === index) {
-      slide.classList.add('active');
-      dots[i].classList.add('active');
-    }
-  });
-}
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
+  // Initialize
   showSlide(currentSlide);
-}
-
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-prevBtn.addEventListener('click', prevSlide);
-nextBtn.addEventListener('click', nextSlide);
-
-// Initialize
-showSlide(currentSlide);
-setInterval(nextSlide, 10000);
-
-  </script>
+  setInterval(nextSlide, 10000);
+</script>
 
 </body>
 </html>

@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GoodsSupplier</title>
   <meta name="description" content="Choose between locally made Pakistani products or globally imported goods at GoodsSupplier." />
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -19,10 +15,20 @@
 
 <body>
 
+<!-- Header -->
 <header class="site-header">
-  <div class="logo-container">
-    <img src="goodssupplierlogo.png" alt="GoodsSupplier Logo" class="site-logo">
+  <div class="header-top">
+    <div class="logo-container">
+      <img src="goodssupplierlogo.png" alt="GoodsSupplier Logo" class="site-logo">
+    </div>
+    <div class="header-icons">
+      <a href="#" title="Language" class="icon-link">🌐</a>
+      <a href="cart.html" title="Cart" class="icon-link">🛒</a>
+      <a href="#" title="Account" class="icon-link">👤</a>
+      <button class="signup-btn">Sign Up</button>
+    </div>
   </div>
+
   <nav class="nav-links">
     <a href="index.html">Home</a>
     <a href="pakistani.html">Pakistani</a>
@@ -32,18 +38,40 @@
   </nav>
 </header>
 
+<!-- Language Selector Dropdown -->
+<div class="language-selector">
+  <select id="languageDropdown" onchange="changeLanguage()">
+    <option value="en" selected>English</option>
+    <option value="ur">اردو</option>
+    <option value="punjabi">پنجابی</option>
+    <option value="sindhi">سنڌي</option>
+    <option value="balochi">بلوچی</option>
+    <option value="pashto">پښتو</option>
+    <option value="ar">العربية</option>
+    <option value="zh">中文 (Chinese)</option>
+    <option value="en_uk">English (UK)</option>
+    <option value="en_us">English (USA)</option>
+    <option value="fr">Français</option>
+    <option value="hi">हिन्दी (Hindi)</option>
+    <option value="es">Español (Spanish)</option>
+    <option value="ko">한국어 (Korean)</option>
+    <option value="ru">Русский (Russian)</option>
+  </select>
+</div>
+
 <!-- Secondary Menu -->
 <nav class="secondary-menu">
-  <a href="#">☰ All Categories</a>
-  <a href="#">Featured selections</a>
-  <a href="#">Order protections</a>
-  <a href="#">AI Sourcing Agent</a>
-  <a href="#">Buyer Central</a>
-  <a href="#">Help Center</a>
-  <a href="#">Get the app</a>
-  <a href="#">Become a supplier</a>
+  <a id="allCategories" href="#">☰ All Categories</a>
+  <a id="featuredSelections" href="#">⭐ Featured Selections</a>
+  <a id="orderProtections" href="#">🛡️ Order Protections</a>
+  <a id="aiSourcingAgent" href="#">🤖 AI Sourcing Agent</a>
+  <a id="buyerCentral" href="#">🏠 Buyer Central</a>
+  <a id="helpCenter" href="#">❓ Help Center</a>
+  <a id="getTheApp" href="#">📲 Get the App</a>
+  <a id="becomeSupplier" href="#">🤝 Become a Supplier</a>
 </nav>
 
+<!-- Hero Section -->
 <section class="hero-section">
   <div class="carousel-container">
     <div class="carousel-slide">
@@ -58,89 +86,46 @@
 
   <div class="hero-overlay"></div>
 
+  <div class="hero-content">
+    <h1 id="heroHeading">The Leading B2B Platform for Pakistani Trade</h1>
+    
+    <div class="search-container">
+      <input type="text" placeholder="Search for products..." class="search-input">
+      <button id="searchButton" class="search-button">🔍 Search</button>
+    </div>
+
+    <div class="frequently-searched">
+      <span class="tag">Hoodies</span>
+      <span class="tag">T-Shirts</span>
+      <span class="tag">Custom Mugs</span>
+      <span class="tag">Stationery</span>
+    </div>
+  </div>
+
   <!-- Arrows -->
   <button class="prev">&#10094;</button>
   <button class="next">&#10095;</button>
 
   <!-- Dots -->
   <div class="carousel-dots"></div>
-
-  <div class="hero-content">
-    <h1>The Leading B2B Platform for Pakistani Trade</h1>
-
-    <div class="search-bar">
-      <input type="text" placeholder="Search for products...">
-      <button>Search</button>
-    </div>
-
-    <div class="frequently-searched">
-      <span>hoodies</span>
-      <span>t-shirts</span>
-      <span>custom mugs</span>
-      <span>stationery</span>
-    </div>
-  </div>
 </section>
 
+<!-- Footer -->
 <footer class="site-footer">
   <div class="footer-links">
-    <a href="index.html">Home</a> |
-    <a href="pakistani.html">Pakistani</a> |
-    <a href="dysandris.html">DySandris</a> |
-    <a href="cart.html">Cart</a> |
-    <a href="favourite.html">Favourites</a>
+    <a id="footerHome" href="index.html">Home</a> |
+    <a id="footerPakistani" href="pakistani.html">Pakistani</a> |
+    <a id="footerDySandris" href="dysandris.html">DySandris</a> |
+    <a id="footerCart" href="cart.html">Cart</a> |
+    <a id="footerFavourites" href="favourite.html">Favourites</a>
   </div>
-  <p class="footer-text">© 2025 GoodsSupplier. Empowering Local and Global Trade.</p>
+  <p id="footerCopy" class="footer-text">© 2025 GoodsSupplier. Empowering Local and Global Trade.</p>
 </footer>
 
-<script>
-  const slides = document.querySelectorAll('.carousel-slide img');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-  const dotsContainer = document.querySelector('.carousel-dots');
-  let currentSlide = 0;
+<!-- Scripts -->
+<script src="carousel.js"></script>
 
-  // Create dots
-  slides.forEach((slide, index) => {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    dot.addEventListener('click', () => {
-      currentSlide = index;
-      showSlide(currentSlide);
-    });
-    dotsContainer.appendChild(dot);
-  });
-
-  const dots = document.querySelectorAll('.dot');
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      dots[i].classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-        dots[i].classList.add('active');
-      }
-    });
-  }
-
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  prevBtn.addEventListener('click', prevSlide);
-  nextBtn.addEventListener('click', nextSlide);
-
-  // Initialize
-  showSlide(currentSlide);
-  setInterval(nextSlide, 10000);
-</script>
+<script src="language.js"></script>
 
 </body>
 </html>

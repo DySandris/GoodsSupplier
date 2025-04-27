@@ -14,55 +14,92 @@ body, html {
 .site-header {
   background-color: white;
   color: black;
-  padding: 20px 20px;
+  padding: 15px 20px;
   border-bottom: 1px solid #ddd;
 }
 
+/* Top part: logo + icons */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
 .logo-container {
   display: flex;
   align-items: center;
 }
 
 .site-logo {
-  width: 140px; /* bigger size now */
-  height: auto; /* keep original aspect ratio */
+  width: 140px;
+  height: auto;
 }
 
+/* Header Icons + Signup */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
+.icon-link {
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
 
-.logo-text {
-  font-size: 28px;
+.icon-link:hover {
+  color: #0e8a55;
+}
+
+.signup-btn {
+  background-color: #ff6a00;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
   font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
+.signup-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Main Navigation */
 .nav-links {
   margin-top: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 25px;
 }
 
 .nav-links a {
   color: black;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: 500;
+  font-size: 16px;
 }
-
 
 .nav-links a:hover {
   text-decoration: underline;
-  color: #0e8a55; /* or any nice green or blue */
+  color: #0e8a55;
 }
 
+/* Secondary Menu */
 .secondary-menu {
   background-color: #1a1a1a;
   padding: 12px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .secondary-menu a {
@@ -70,13 +107,12 @@ body, html {
   font-size: 15px;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .secondary-menu a:hover {
-  color: #00b894; /* Nice green highlight on hover */
+  color: #00b894;
 }
-
 
 /* Hero Section */
 .hero-section {
@@ -118,7 +154,7 @@ body, html {
   transform: scale(1.05);
 }
 
-/* Arrows */
+/* Carousel Arrows */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -132,9 +168,11 @@ body, html {
   font-size: 24px;
   border-radius: 50%;
 }
+
 .prev {
   left: 20px;
 }
+
 .next {
   right: 20px;
 }
@@ -160,6 +198,79 @@ body, html {
 
 .dot.active {
   background-color: #0e8a55;
+}
+
+/* Hero Content (inside carousel) */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+}
+
+/* Search Bar */
+.search-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 30px 0 0 30px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.4s;
+}
+
+.search-input:focus {
+  border-color: #0e8a55;
+  box-shadow: 0 0 10px rgba(14,138,85,0.4);
+}
+
+.search-button {
+  padding: 12px 25px;
+  border: none;
+  background: #0e8a55;
+  color: white;
+  border-radius: 0 30px 30px 0;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+.search-button:hover {
+  background: #0c7045;
+}
+
+/* Frequently Searched */
+.frequently-searched {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: #0e8a55;
+  color: white;
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -196,34 +307,47 @@ body, html {
     font-size: 28px;
   }
 
-  .search-bar {
+  .search-container {
     flex-direction: column;
-    align-items: center;
   }
 
-  .search-bar input {
+  .search-input, .search-button {
     width: 80%;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 30px;
   }
 
-  .search-bar button {
-    width: 50%;
-    border-radius: 5px;
+  .search-button {
+    margin-top: 10px;
   }
 
   .frequently-searched {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
   }
 
-  .frequently-searched span {
-    font-size: 12px;
-    margin: 5px;
+  .nav-links {
+    flex-wrap: wrap;
   }
+}
 
-  .carousel-slide img {
-    height: 70vh;
-  }
+
+/* Language Selector Styles */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.language-selector select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-selector select:hover {
+  border-color: #888;
 }

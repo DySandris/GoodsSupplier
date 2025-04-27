@@ -330,24 +330,63 @@ body, html {
 }
 
 
-/* Language Selector Styles */
-.language-selector {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 999;
-}
 
-.language-selector select {
-  padding: 8px 12px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.language-selector select:hover {
-  border-color: #888;
-}
+/* =========================
+   Language Selector Styles
+   ========================= */
+   .language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .language-selector select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .language-selector select:hover {
+    border-color: #888;
+    background-color: #f9f9f9;
+  }
+  
+  /* =========================
+     Responsive Adjustments
+     ========================= */
+  @media (max-width: 768px) {
+    .language-selector {
+      top: 15px;
+      right: 10px;
+    }
+  
+    .language-selector select {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .language-selector {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      right: auto;
+      background: #ffffffcc;
+      padding: 5px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  
+    .language-selector select {
+      width: 120px;
+      font-size: 13px;
+    }
+  }
+  

@@ -1,0 +1,80 @@
+/* Explore Sections Common */
+.explore-section {
+    padding: 60px 20px;
+    background: #ffffff;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .pakistani-section {
+    background: #f3fbf6;
+  }
+  
+  .explore-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .explore-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .explore-left h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .explore-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #ff6a00;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background 0.3s;
+  }
+  
+  .explore-button:hover {
+    background: #e65c00;
+  }
+  
+  .explore-left p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .explore-right {
+    display: flex;
+    flex: 1;
+    min-width: 280px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .explore-stat {
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff6a00;
+    text-shadow: 0 0 8px rgba(255, 106, 0, 0.5);
+  }
+  
+  .stat-label {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #333;
+  }

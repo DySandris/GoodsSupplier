@@ -1,0 +1,47 @@
+.homepage-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .homepage-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1d3557;
+  }
+  
+  .products-grid, .categories-grid, .brands-grid, .banners-grid, .offers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Feature Highlights Section (commented out in original) */
+  /*
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 60px 20px;
+    background: #f9f9f9;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background: #fff;
+    border-radius: 15px;
+    width: 250px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .feature-card img {
+    width: 50px;
+    margin-bottom: 20px;
+  }
+  */

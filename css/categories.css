@@ -1,0 +1,72 @@
+/* Category Slider - 4 Line Version */
+.categories-slider {
+    padding: 2rem 5%;
+    background: #f8fafc;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider-wrapper {
+    padding: 0 50px;
+  }
+  
+  .slider-line {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+    width: max-content;
+  }
+  
+  .category-card {
+    min-width: 160px;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .category-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .left { left: 0; }
+  .right { right: 0; }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .category-card {
+      min-width: 140px;
+      padding: 12px;
+    }
+  }

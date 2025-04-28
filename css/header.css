@@ -1,0 +1,104 @@
+/* Header */
+.site-header {
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Top part: logo + icons */
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-logo {
+    width: 140px;
+    height: auto;
+  }
+  
+  /* Header Icons + Signup */
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .icon-link {
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .icon-link:hover {
+    color: #0e8a55;
+  }
+  
+  .signup-btn {
+    background-color: #ff6a00;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .signup-btn:hover {
+    background-color: #e65c00;
+  }
+  
+  /* Main Navigation */
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  
+  .nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+    color: #0e8a55;
+  }
+  
+  /* Secondary Menu */
+  .secondary-menu {
+    background-color: #1a1a1a;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .secondary-menu a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .secondary-menu a:hover {
+    color: #00b894;
+  }
+  

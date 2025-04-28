@@ -1,0 +1,33 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Common Grids for Products, Categories, Brands, etc. */
+  .homepage-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .homepage-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1d3557;
+  }
+  
+  .products-grid, .categories-grid, .brands-grid, .banners-grid, .offers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  

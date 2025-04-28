@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoodsSupplier</title>
-  <meta name="description" content="Choose between locally made Pakistani products or globally imported goods at GoodsSupplier." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
+  <head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="description" content="Choose between locally made Pakistani products or globally imported goods at GoodsSupplier." />
+    
+    <!-- SEO & Social Meta -->
+    <meta name="keywords" content="GoodsSupplier, Pakistani products, imported goods, ecommerce" />
+    <meta name="author" content="GoodsSupplier" />
+    <meta property="og:title" content="GoodsSupplier" />
+    <meta property="og:description" content="Your premier destination for local Pakistani and global imported goods." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://goodssupplier.com" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Title -->
+    <title>GoodsSupplier | Local & Imported Products</title>
+    
+    <!-- Favicons (Optimized Order) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- CSS (Prioritized Loading) -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="css/animations.css" /></noscript>
+    <link rel="stylesheet" href="css/explore.css" />
+    <link rel="stylesheet" href="css/categories.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/payments.css" />
+    <link rel="stylesheet" href="css/app-promotion.css" />
+    <link rel="stylesheet" href="css/mini-footer.css" />
 </head>
+  
 
 <body>
 
@@ -138,33 +166,72 @@
 </section> -->
 
 
-<!-- 🚀 Explore Offerings Section -->
-<section class="explore-offerings">
+<!-- Explore DySandris Section -->
+<section class="explore-section">
   <div class="explore-container">
-    <div class="explore-text">
-      <h2>Everything You Need to Power Your Business Growth</h2>
-      <p>Find products, suppliers, and opportunities around the globe — all in one place.</p>
+    <div class="explore-left">
+      <h2>Explore the World's Best with</h2>
+      <a href="dysandris.html" class="explore-button">DySandris</a>
+      <p>Access international products, brands, and opportunities across the globe — delivered with trust and quality.</p>
     </div>
-    <div class="explore-stats">
-      <div class="stat-item">
-        <div class="stat-number">200M+</div>
+    <div class="explore-right">
+      <div class="explore-stat">
+        <div class="stat-number count-up" data-target="200000000">0</div>
         <div class="stat-label">Products</div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number">200K+</div>
+      <div class="explore-stat">
+        <div class="stat-number count-up" data-target="200000">0</div>
         <div class="stat-label">Suppliers</div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number">5,900</div>
-        <div class="stat-label">Product Categories</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">200+</div>
-        <div class="stat-label">Countries & Regions</div>
+      <div class="explore-stat">
+        <div class="stat-number count-up" data-target="200">0</div>
+        <div class="stat-label">Countries</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Explore BePakistaniBuyPakistani Section -->
+<section class="explore-section pakistani-section">
+  <div class="explore-container">
+    <div class="explore-left">
+      <h2>Celebrate Local Excellence with</h2>
+      <a href="pakistani.html" class="explore-button">BePakistaniBuyPakistani</a>
+      <p>Support Pakistani businesses, industries, and products made with pride, passion, and perfection.</p>
+    </div>
+    <div class="explore-right">
+      <div class="explore-stat">
+        <div class="stat-number count-up" data-target="5000000">0</div>
+        <div class="stat-label">Products</div>
+      </div>
+      <div class="explore-stat">
+        <div class="stat-number count-up" data-target="10000">0</div>
+        <div class="stat-label">Suppliers</div>
+      </div>
+      <div class="explore-stat">
+        <div class="stat-number count-up" data-target="1">0</div>
+        <div class="stat-label">Country</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Category Slider Section -->
+<section class="categories-slider">
+  <h2>Browse Top Categories</h2>
+  <div class="slider-container">
+    <button class="slider-nav left">&larr;</button>
+    <div class="slider-wrapper">
+      <!-- 4 lines will be added here by JavaScript -->
+    </div>
+    <button class="slider-nav right">&rarr;</button>
+  </div>
+</section>
+
+
 
 
 
@@ -345,6 +412,12 @@
 <!-- Scripts -->
 <script src="carousel.js"></script>
 <script src="language.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/explore-counters.js"></script>
+<script src="js/homepage-counters.js"></script>
+<!-- Future scripts: <script src="js/footer-links.js"></script> -->
+
+
 
 </body>
 </html>

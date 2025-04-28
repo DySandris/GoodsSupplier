@@ -390,3 +390,131 @@ body, html {
     }
   }
   
+
+  /* App Promotion Section */
+  .app-promotion {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+  }
+  
+  .promotion-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+  }
+  
+  .social-icons img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+  
+  .promotion-text {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .brand-name {
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #0e8a55, #003366);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  
+  .app-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .app-buttons img {
+    height: 45px;
+    width: auto;
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .promotion-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .app-buttons {
+      margin-top: 10px;
+    }
+  }
+  
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promotion-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-bottom: 15px;
+  }
+
+  .app-buttons {
+    margin-top: 15px;
+  }
+}
+
+
+/* Payment Methods Section */
+.payment-methods {
+  background-color: #ffffff;
+  padding: 30px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.payment-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.payment-container img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  flex: 1 0 10%; /* Each icon will fit 8 icons in first line */
+}
+
+.payment-container img:hover {
+  transform: scale(1.1);
+}

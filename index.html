@@ -1,115 +1,142 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Essential Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <meta name="description" content="Choose between locally made Pakistani products or globally imported goods at GoodsSupplier." />
-    
-    <!-- SEO & Social Meta -->
-    <meta name="keywords" content="GoodsSupplier, Pakistani products, imported goods, ecommerce" />
-    <meta name="author" content="GoodsSupplier" />
-    <meta property="og:title" content="GoodsSupplier" />
-    <meta property="og:description" content="Your premier destination for local Pakistani and global imported goods." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://goodssupplier.com" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <!-- Title -->
-    <title>GoodsSupplier | Local & Imported Products</title>
-    
-    
- <!-- Favicon for Browsers -->
-<link rel="icon" type="image/png" sizes="32x32" href="new favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="new favicon_io/favicon-16x16.png">
-<link rel="icon" type="image/x-icon" href="new favicon_io/favicon.ico">
-
-<!-- Apple Touch Icon for iPhones/iPads -->
-<link rel="apple-touch-icon" sizes="180x180" href="new favicon_io/apple-touch-icon.png">
-
-<!-- Android Chrome Icons -->
-<link rel="icon" type="image/png" sizes="192x192" href="new favicon_io/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="new favicon_io/android-chrome-512x512.png">
-
-<!-- Web App Manifest -->
-<link rel="manifest" href="new favicon_io/site.webmanifest">
+<head> 
+   Essential Meta Tags 
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Choose between locally made Pakistani products or globally imported goods at GoodsSupplier." />
 
 
-<!-- Legacy Browser Support -->
-<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <!-- CSS (Prioritized Loading) -->
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="css/animations.css" /></noscript>
-    <link rel="stylesheet" href="css/explore.css" />
-    <link rel="stylesheet" href="css/categories.css" />
-    <link rel="stylesheet" href="css/homepage.css" />
-    <link rel="stylesheet" href="css/payments.css" />
-    <link rel="stylesheet" href="css/app-promotion.css" />
-    <link rel="stylesheet" href="css/mini-footer.css" />
+  <!-- SEO & Social Meta -->
+  <meta name="keywords" content="GoodsSupplier, Pakistani products, imported goods, ecommerce" />
+  <meta name="author" content="GoodsSupplier" />
+  <meta property="og:title" content="GoodsSupplier" />
+  <meta property="og:description" content="Your premier destination for local Pakistani and global imported goods." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://goodssupplier.com" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Title -->
+  <title>GoodsSupplier | Local & Imported Products</title>
+
+  <!-- Favicon for Browsers -->
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Extra Icons for Android -->
+  <link rel="icon" type="image/png" sizes="192x192" href="web-app-manifest-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png" />
+
+  <!-- CSS Files (Prioritized Loading) -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/explore.css" />
+  <link rel="stylesheet" href="css/categories.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/payments.css" />
+  <link rel="stylesheet" href="css/mini-footer.css" />
+  <link rel="stylesheet" href="css/app-promotion.css" />
+  <link rel="stylesheet" href="css/app-download.css" />
+  
+  <!-- Preload Animations -->
+  <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="css/animations.css" /></noscript>
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
   
 
 <body>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="header-top">
-    <div class="logo-container">
-      <img src="goodssupplierlogo.png" alt="GoodsSupplier Logo" class="site-logo">
-    </div>
-    <div class="header-icons">
-      <a href="#" title="Language" class="icon-link">🌐</a>
-      <a href="cart.html" title="Cart" class="icon-link">🛒</a>
-      <a href="#" title="Account" class="icon-link">👤</a>
-      <button class="signup-btn">Sign Up</button>
-    </div>
-  </div>
+  <!-- Animated Gradient Top Bar -->
+<div class="top-gradient-bar"></div>
 
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="pakistani.html">Pakistani</a>
-    <a href="dysandris.html">DySandris</a>
-    <a href="cart.html">Cart</a>
-    <a href="favourite.html">Favourites</a>
-  </nav>
+<!-- Main Header -->
+<header class="main-header">
+    <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo.png" alt="GoodsSupplier" width="160">
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">All Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Paints & Brushes</a>
+                        <a href="#">Fitness Equipment</a>
+                        <a href="#">Lighting Gear</a>
+                        <a href="#">Audio Systems</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Featured Selections <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Best Sellers</a>
+                        <a href="#">New Arrivals</a>
+                        <a href="#">Special Offers</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Order Protections <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Buyer Protection</a>
+                        <a href="#">Return Policy</a>
+                        <a href="#">Secure Payments</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">AI Sourcing Agent <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Product Matching</a>
+                        <a href="#">Supplier Finder</a>
+                        <a href="#">Price Analysis</a>
+                    </div>
+                </li>
+                <li><a href="#">Buyer Central</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+            <div class="delivery-info">
+                <span>Deliver to:</span>
+                <div class="country-selector">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Pakistan</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            
+            <a href="#" class="action-link">Help Center</a>
+            <a href="#" class="action-link">Get the App</a>
+            
+            <div class="language-selector">
+                <i class="fas fa-globe"></i>
+                <span>EN</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            
+            <a href="#" class="supplier-btn">Become a Supplier</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
 </header>
 
-<!-- Language Selector Dropdown -->
-<div class="language-selector">
-  <select id="languageDropdown" onchange="changeLanguage()">
-    <option value="en" selected>English</option>
-    <option value="ur">اردو</option>
-    <option value="punjabi">پنجابی</option>
-    <option value="sindhi">سنڌي</option>
-    <option value="balochi">بلوچی</option>
-    <option value="pashto">پښتو</option>
-    <option value="ar">العربية</option>
-    <option value="zh">中文 (Chinese)</option>
-    <option value="en_uk">English (UK)</option>
-    <option value="en_us">English (USA)</option>
-    <option value="fr">Français</option>
-    <option value="hi">हिन्दी (Hindi)</option>
-    <option value="es">Español (Spanish)</option>
-    <option value="ko">한국어 (Korean)</option>
-    <option value="ru">Русский (Russian)</option>
-  </select>
-</div>
-
-<!-- Secondary Menu -->
-<nav class="secondary-menu">
-  <a id="allCategories" href="#">☰ All Categories</a>
-  <a id="featuredSelections" href="#">⭐ Featured Selections</a>
-  <a id="orderProtections" href="#">🛡️ Order Protections</a>
-  <a id="aiSourcingAgent" href="#">🤖 AI Sourcing Agent</a>
-  <a id="buyerCentral" href="#">🏠 Buyer Central</a>
-  <a id="helpCenter" href="#">❓ Help Center</a>
-  <a id="getTheApp" href="#">📲 Get the App</a>
-  <a id="becomeSupplier" href="#">🤝 Become a Supplier</a>
-</nav>
+  
 
 <!-- Hero Section -->
 <section class="hero-section">
@@ -423,6 +450,7 @@
 
 <!-- Scripts -->
 <script src="carousel.js"></script>
+<script src="js/header.js"></script>
 <script src="language.js"></script>
 <script src="js/categories.js"></script>
 <script src="js/explore-counters.js"></script>

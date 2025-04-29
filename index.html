@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="features.css">
   <link rel="stylesheet" href="css/explore.css" />
   <link rel="stylesheet" href="css/categories.css" />
   <link rel="stylesheet" href="css/homepage.css" />
@@ -177,7 +178,7 @@
   <div class="carousel-dots"></div>
 </section>
 
-Feature Highlights Section
+<!-- Feature Highlights Section
 <section class="features">
   <div class="feature-card" onclick="document.getElementById('featured-products').scrollIntoView({behavior:'smooth'});">
     <img src="icons/grid-icon.svg" alt="Millions of offerings">
@@ -202,7 +203,95 @@ Feature Highlights Section
     <h3>Tailored trading experience</h3>
     <p>Exclusive discounts, extra support, protection, to grow your business at every step.</p>
   </div>
-</section>
+</section> -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoodsSupplier - Features</title>
+  <link rel="stylesheet" href="features.css">
+  <script src="features.js" defer></script>
+</head>
+<body>
+  <!-- Feature Highlights Section with background image -->
+  <section class="feature-highlights-container">
+    <div class="feature-background"></div>
+    <h2 class="section-title">Feature Highlights Section</h2>
+    
+    <div class="features">
+      <!-- Feature 1 -->
+      <div class="feature-card" id="millions-offerings">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="50" height="50">
+            <path fill="currentColor" d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>Millions of business offerings</h3>
+          <p>Explore products and suppliers for your business from millions of offerings worldwide.</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card" id="assured-quality">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="50" height="50">
+            <path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1-2.1-.94-2.1-2.1.94-2.1 2.1-2.1zm0 10.9c-1.73 0-3.3-.72-4.4-1.87 1.43-.89 2.88-1.33 4.4-1.33s2.97.44 4.4 1.33c-1.1 1.15-2.67 1.87-4.4 1.87z"/>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>Assured quality and transactions</h3>
+          <p>Ensured production quality from verified suppliers, with protection from payment to delivery.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card" id="one-stop-solution">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="50" height="50">
+            <path fill="currentColor" d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>One-stop trading solution</h3>
+          <p>Order seamlessly from search to management, payment, and fulfillment.</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card" id="tailored-experience">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="50" height="50">
+            <path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>Tailored trading experience</h3>
+          <p>Exclusive discounts, extra support, protection, to grow your business at every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
 
 
 <!-- Explore DySandris Section -->
@@ -455,6 +544,7 @@ Feature Highlights Section
 <script src="js/categories.js"></script>
 <script src="js/explore-counters.js"></script>
 <script src="js/homepage-counters.js"></script>
+<script src="features.js" defer></script>
 <!-- Future scripts: <script src="js/footer-links.js"></script> -->
 
 

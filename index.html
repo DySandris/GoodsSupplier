@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head> 
    Essential Meta Tags 
@@ -8,7 +8,11 @@
   <meta name="description" content="Choose between locally made Pakistani products or globally imported goods at GoodsSupplier." />
 
 
+
   <!-- SEO & Social Meta -->
+
+
+
   <meta name="keywords" content="GoodsSupplier, Pakistani products, imported goods, ecommerce" />
   <meta name="author" content="GoodsSupplier" />
   <meta property="og:title" content="GoodsSupplier" />
@@ -18,41 +22,72 @@
   <meta name="theme-color" content="#ffffff" />
 
   <!-- Title -->
+
+
+
   <title>GoodsSupplier | Local & Imported Products</title>
 
   <!-- Favicon for Browsers -->
+
+
+
   <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Apple Touch Icon -->
+
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
   <!-- Web App Manifest -->
+
+
+
   <link rel="manifest" href="site.webmanifest" />
 
   <!-- Extra Icons for Android -->
+
+
+
   <link rel="icon" type="image/png" sizes="192x192" href="web-app-manifest-192x192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png" />
 
+
   <!-- CSS Files (Prioritized Loading) -->
+
+
+
   <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/primary-header.css" />
+  <link rel="stylesheet" href="css/secondary-header.css" />
   <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="features.css">
+  <link rel="stylesheet" href="css/features.css" />
   <link rel="stylesheet" href="css/explore.css" />
   <link rel="stylesheet" href="css/categories.css" />
   <link rel="stylesheet" href="css/homepage.css" />
   <link rel="stylesheet" href="css/payments.css" />
+  <link rel="stylesheet" href="css/trust.css" />
+  <link rel="stylesheet" href="css/support.css" />
   <link rel="stylesheet" href="css/mini-footer.css" />
   <link rel="stylesheet" href="css/app-promotion.css" />
   <link rel="stylesheet" href="css/app-download.css" />
   
+
+
   <!-- Preload Animations -->
+
+
+
   <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="css/animations.css" /></noscript>
 
+
+
   <!-- FontAwesome for Icons -->
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -60,86 +95,78 @@
 
 <body>
 
+
+
   <!-- Animated Gradient Top Bar -->
+
+
+
 <div class="top-gradient-bar"></div>
 
-<!-- Main Header -->
-<header class="main-header">
-    <div class="header-container">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logo.png" alt="GoodsSupplier" width="160">
-        </div>
 
-        <!-- Main Navigation -->
-        <nav class="main-nav">
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="#">All Categories <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="#">Paints & Brushes</a>
-                        <a href="#">Fitness Equipment</a>
-                        <a href="#">Lighting Gear</a>
-                        <a href="#">Audio Systems</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Featured Selections <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="#">Best Sellers</a>
-                        <a href="#">New Arrivals</a>
-                        <a href="#">Special Offers</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Order Protections <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="#">Buyer Protection</a>
-                        <a href="#">Return Policy</a>
-                        <a href="#">Secure Payments</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">AI Sourcing Agent <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="#">Product Matching</a>
-                        <a href="#">Supplier Finder</a>
-                        <a href="#">Price Analysis</a>
-                    </div>
-                </li>
-                <li><a href="#">Buyer Central</a></li>
-            </ul>
-        </nav>
 
-        <!-- Right Side Actions -->
-        <div class="header-actions">
-            <div class="delivery-info">
-                <span>Deliver to:</span>
-                <div class="country-selector">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Pakistan</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-            
-            <a href="#" class="action-link">Help Center</a>
-            <a href="#" class="action-link">Get the App</a>
-            
-            <div class="language-selector">
-                <i class="fas fa-globe"></i>
-                <span>EN</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            
-            <a href="#" class="supplier-btn">Become a Supplier</a>
-            <a href="#" class="signup-btn">Sign Up</a>
-        </div>
+
+<!-- primary-header -->
+
+
+
+<header class="primary-header">
+  <div class="logo-search">
+    <div class="logo">
+      <span class="logo-green">Goods</span><span class="logo-blue">Supplier</span>
     </div>
+
+    <div class="search-bar">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="Search products..." class="search-input">
+    </div>
+  </div>
+
+  <div class="header-actions">
+    <button class="action-btn delivery-btn">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Delivery to Pakistan</span>
+    </button>
+
+    <button class="action-btn language-btn">
+      <i class="fas fa-globe"></i>
+      <span>EN | Rs PKR</span>
+    </button>
+
+    <button class="action-btn signin-btn">
+      <i class="fas fa-user"></i>
+      <span>Sign In</span>
+    </button>
+
+    <button class="action-btn signup-btn">
+      <span>Sign Up</span>
+    </button>
+  </div>
 </header>
 
-  
+
+
+<!-- secondary-header -->
+ 
+<nav class="secondary-header">
+  <div class="secondary-logo">
+    <img src="assets/logo.png" alt="GoodsSupplier Logo" />
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">Explore</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+
 
 <!-- Hero Section -->
+
+
+
 <section class="hero-section">
   <div class="carousel-container">
     <div class="carousel-slide">
@@ -163,10 +190,10 @@
     </div>
 
     <div class="frequently-searched">
-      <span class="tag">Hoodies</span>
-      <span class="tag">T-Shirts</span>
-      <span class="tag">Custom Mugs</span>
-      <span class="tag">Stationery</span>
+      <span class="tag">Agriculture</span>
+      <span class="tag">Fashion Accessories</span>
+      <span class="tag">Medical Devices</span>
+      <span class="tag">Drinkware</span>
     </div>
   </div>
 
@@ -178,117 +205,46 @@
   <div class="carousel-dots"></div>
 </section>
 
-<!-- Feature Highlights Section
-<section class="features">
-  <div class="feature-card" onclick="document.getElementById('featured-products').scrollIntoView({behavior:'smooth'});">
-    <img src="icons/grid-icon.svg" alt="Millions of offerings">
-    <h3>Millions of business offerings</h3>
-    <p>Explore products and suppliers for your business from millions of offerings worldwide.</p>
-  </div>
-
-  <div class="feature-card" onclick="document.getElementById('top-deals').scrollIntoView({behavior:'smooth'});">
-    <img src="icons/verified-icon.svg" alt="Assured quality">
-    <h3>Assured quality and transactions</h3>
-    <p>Ensured production quality from verified suppliers, with protection from payment to delivery.</p>
-  </div>
-
-  <div class="feature-card" onclick="document.getElementById('one-stop').scrollIntoView({behavior:'smooth'});">
-    <img src="icons/trading-icon.svg" alt="One-stop solution">
-    <h3>One-stop trading solution</h3>
-    <p>Order seamlessly from search to management, payment, and fulfillment.</p>
-  </div>
-
-  <div class="feature-card" onclick="document.getElementById('tailored-experience').scrollIntoView({behavior:'smooth'});">
-    <img src="icons/experience-icon.svg" alt="Tailored experience">
-    <h3>Tailored trading experience</h3>
-    <p>Exclusive discounts, extra support, protection, to grow your business at every step.</p>
-  </div>
-</section> -->
 
 
 
 
 
+<!-- Feature Highlights Section -->
+<section class="feature-section">
+  <h2 class="feature-title">Why Choose GoodsSupplier?</h2>
+  <div class="feature-grid">
 
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GoodsSupplier - Features</title>
-  <link rel="stylesheet" href="features.css">
-  <script src="features.js" defer></script>
-</head>
-<body>
-  <!-- Feature Highlights Section with background image -->
-  <section class="feature-highlights-container">
-    <div class="feature-background"></div>
-    <h2 class="section-title">Feature Highlights Section</h2>
-    
-    <div class="features">
-      <!-- Feature 1 -->
-      <div class="feature-card" id="millions-offerings">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" width="50" height="50">
-            <path fill="currentColor" d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/>
-          </svg>
-        </div>
-        <div class="feature-content">
-          <h3>Millions of business offerings</h3>
-          <p>Explore products and suppliers for your business from millions of offerings worldwide.</p>
-        </div>
-      </div>
-
-      <!-- Feature 2 -->
-      <div class="feature-card" id="assured-quality">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" width="50" height="50">
-            <path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1-2.1-.94-2.1-2.1.94-2.1 2.1-2.1zm0 10.9c-1.73 0-3.3-.72-4.4-1.87 1.43-.89 2.88-1.33 4.4-1.33s2.97.44 4.4 1.33c-1.1 1.15-2.67 1.87-4.4 1.87z"/>
-          </svg>
-        </div>
-        <div class="feature-content">
-          <h3>Assured quality and transactions</h3>
-          <p>Ensured production quality from verified suppliers, with protection from payment to delivery.</p>
-        </div>
-      </div>
-
-      <!-- Feature 3 -->
-      <div class="feature-card" id="one-stop-solution">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" width="50" height="50">
-            <path fill="currentColor" d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/>
-          </svg>
-        </div>
-        <div class="feature-content">
-          <h3>One-stop trading solution</h3>
-          <p>Order seamlessly from search to management, payment, and fulfillment.</p>
-        </div>
-      </div>
-
-      <!-- Feature 4 -->
-      <div class="feature-card" id="tailored-experience">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" width="50" height="50">
-            <path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-          </svg>
-        </div>
-        <div class="feature-content">
-          <h3>Tailored trading experience</h3>
-          <p>Exclusive discounts, extra support, protection, to grow your business at every step.</p>
-        </div>
-      </div>
+    <!-- Card 1 -->
+    <div class="feature-card animate-on-scroll">
+      <div class="icon-box"><i class="fas fa-th"></i></div>
+      <h3>Millions of business offerings</h3>
+      <p>Explore products and suppliers from millions of offerings worldwide.</p>
     </div>
-  </section>
-</body>
-</html>
 
+    <!-- Card 2 -->
+    <div class="feature-card animate-on-scroll">
+      <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+      <h3>Assured quality and transactions</h3>
+      <p>Verified suppliers and secure transactions from order to delivery.</p>
+    </div>
 
+    <!-- Card 3 -->
+    <div class="feature-card animate-on-scroll">
+      <div class="icon-box"><i class="fas fa-random"></i></div>
+      <h3>One-stop trading solution</h3>
+      <p>Manage everything from search to payment and fulfillment seamlessly.</p>
+    </div>
 
+    <!-- Card 4 -->
+    <div class="feature-card animate-on-scroll">
+      <div class="icon-box"><i class="fas fa-star"></i></div>
+      <h3>Tailored trading experience</h3>
+      <p>Get exclusive deals, support, and growth resources for your business.</p>
+    </div>
 
-
+  </div>
+</section>
 
 
 
@@ -319,6 +275,8 @@
   </div>
 </section>
 
+
+
 <!-- Explore BePakistaniBuyPakistani Section -->
 <section class="explore-section pakistani-section">
   <div class="explore-container">
@@ -346,14 +304,22 @@
 
 
 
-
 <!-- Category Slider Section -->
+
+
+
 <section class="categories-slider">
   <h2>Browse Top Categories</h2>
   <div class="slider-container">
     <button class="slider-nav left">&larr;</button>
     <div class="slider-wrapper">
+
+
+
       <!-- 4 lines will be added here by JavaScript -->
+
+
+
     </div>
     <button class="slider-nav right">&rarr;</button>
   </div>
@@ -363,34 +329,58 @@
 
 
 
-
 <!-- Homepage Main Content -->
 
+
+
+
+
 <!-- 🎯 Featured Products Section -->
+
+
 <section id="featured-products" class="homepage-section">
   <h2>🌟 Featured Products</h2>
   <div class="products-grid">
+
+
     <!-- Product Cards will go here -->
+
+
+
   </div>
 </section>
 
 <!-- 🎯 Top Deals Section -->
+
+
 <section id="top-deals" class="homepage-section">
   <h2>🔥 Top Deals</h2>
   <div class="products-grid">
+
+
     <!-- Top Deal Cards -->
+
+
   </div>
 </section>
 
 <!-- 🎯 New Arrivals Section -->
+
+
+
 <section id="new-arrivals" class="homepage-section">
   <h2>🆕 New Arrivals</h2>
   <div class="products-grid">
+
+
+
     <!-- New Arrival Cards -->
   </div>
 </section>
 
 <!-- 🎯 Trending Categories Section -->
+
+
 <section id="trending-categories" class="homepage-section">
   <h2>📈 Trending Categories</h2>
   <div class="categories-grid">
@@ -425,7 +415,18 @@
 
 
 
+
 <!-- Payment Methods Section -->
+
+
+
+
+
+<div class="payment-heading">
+  <h2>Global Payment Options Trusted by Millions</h2>
+  <p>We support a wide range of secure payment methods — from international credit cards to local digital wallets — so you can transact with ease, no matter where you are.</p>
+</div>
+
 <div class="payment-logos">
   <div class="logo-box"><img src="Payment Method/Mastercard.png" alt="Mastercard"></div>
   <div class="logo-box"><img src="Payment Method/Visa.png" alt="Visa"></div>
@@ -447,27 +448,111 @@
 </div>
 
 
+
+
+
 <!-- Trust Badges Section -->
-<div class="trust-badges">
-  <div class="badge-box">
-    <img src="badges/ssl-secured.png" alt="SSL Secured">
+
+
+
+
+
+<section class="trust-section">
+  <h2 class="trust-heading">Trusted & Verified by Businesses Worldwide</h2>
+  <p class="trust-subtext">
+    Our platform is secured, verified, and fully compliant with international standards. 
+    Shop with confidence backed by globally recognized trust badges.
+  </p>
+
+  <div class="trust-badges">
+    <div class="badge-box animate-on-scroll">
+      <img src="badges/ssl-secured.png" alt="SSL Secured" />
+    </div>
+    <div class="badge-box animate-on-scroll">
+      <img src="badges/verified-payment.png" alt="Verified Payment" />
+    </div>
+    <div class="badge-box animate-on-scroll">
+      <img src="badges/100-protection.png" alt="100% Protection" />
+    </div>
+    <div class="badge-box animate-on-scroll">
+      <img src="badges/pci-compliant.png" alt="PCI DSS Compliant" />
+    </div>
+    <div class="badge-box animate-on-scroll">
+      <img src="badges/secure-checkout.png" alt="Secure Checkout" />
+    </div>
   </div>
-  <div class="badge-box">
-    <img src="badges/verified-payment.png" alt="Verified Payment">
+  
+</section>
+
+
+
+<!-- support-links.html -->
+
+<section class="support-section">
+  <h2 class="support-title">Support & Services</h2>
+  <div class="support-grid">
+
+    <!-- Row 1 -->
+    <div class="support-row">
+      <div class="support-column">
+        <h3>Get Support</h3>
+        <a href="get-support/help-center.html">Help Center</a>
+        <a href="get-support/live-chat.html">Live Chat</a>
+        <a href="get-support/order-status.html">Check Order Status</a>
+        <a href="get-support/refunds.html">Refunds</a>
+        <a href="get-support/report-abuse.html">Report Abuse</a>
+      </div>
+
+      <div class="support-column">
+        <h3>Payments & Protections</h3>
+        <a href="payments/safe-payments.html">Safe Payments</a>
+        <a href="payments/credit-card.html">Business Credit Card</a>
+        <a href="payments/money-back.html">Money-back Policy</a>
+        <a href="payments/on-time-shipping.html">On-time Shipping</a>
+        <a href="payments/after-sales.html">After-Sales Protection</a>
+        <a href="payments/product-monitoring.html">Product Monitoring</a>
+      </div>
+
+      <div class="support-column">
+        <h3>Source on GoodsSupplier</h3>
+        <a href="source/request-quotation.html">Request for Quotation</a>
+        <a href="source/membership.html">Membership Program</a>
+        <a href="source/logistics.html">Logistics</a>
+        <a href="source/tax.html">Sales Tax & VAT</a>
+        <a href="source/guides.html">Reads & Guides</a>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="support-row">
+      <div class="support-column">
+        <h3>Sell on GoodsSupplier</h3>
+        <a href="sell/start-selling.html">Start Selling</a>
+        <a href="sell/seller-central.html">Seller Central</a>
+        <a href="sell/become-verified.html">Become Verified</a>
+        <a href="sell/partnerships.html">Partnerships</a>
+        <a href="sell/supplier-app.html">App for Suppliers</a>
+      </div>
+
+      <div class="support-column">
+        <h3>Get to Know Us</h3>
+        <a href="about/about.html">About Us</a>
+        <a href="about/responsibility.html">Corporate Responsibility</a>
+        <a href="about/news.html">News Center</a>
+        <a href="about/careers.html">Careers</a>
+      </div>
+    </div>
+
   </div>
-  <div class="badge-box">
-    <img src="badges/100-protection.png" alt="100% Protection">
-  </div>
-  <div class="badge-box">
-    <img src="badges/pci-compliant.png" alt="PCI DSS Compliant">
-  </div>
-  <div class="badge-box">
-    <img src="badges/secure-checkout.png" alt="Secure Checkout">
-  </div>
-</div>
+</section>
+
 
 
 <!-- Mini Footer Section -->
+
+
+
+
 <div class="mini-footer-wrapper">
   <div class="mini-footer">
     <a href="#">Terms & Conditions</a>
@@ -481,21 +566,8 @@
 
 
 
-<!-- App Download Section
-<div class="app-download">
-  <div class="app-text">
-    <h2>Download the GoodsSupplier App</h2>
-    <p>Shop anytime, anywhere with just a tap!</p>
-  </div>
-  <div class="app-buttons">
-    <a href="#">
-      <img src="badges/app-store.png" alt="Download on App Store">
-    </a>
-    <a href="#">
-      <img src="badges/google-play.png" alt="Get it on Google Play">
-    </a>
-  </div>
-</div> -->
+<!-- App Promotion Section -->
+
 
 
 <!-- App Promotion Section -->
@@ -526,6 +598,9 @@
 
 
 <!-- Footer -->
+
+
+
 <footer class="site-footer">
   <div class="footer-links">
     <a id="footerHome" href="index.html">Home</a> |
@@ -537,14 +612,24 @@
   <p id="footerCopy" class="footer-text">© 2025 GoodsSupplier. Empowering Local and Global Trade.</p>
 </footer>
 
+
+
 <!-- Scripts -->
+
+
+
 <script src="carousel.js"></script>
-<script src="js/header.js"></script>
+<script src="js/primary-header.js"></script>
 <script src="language.js"></script>
 <script src="js/categories.js"></script>
 <script src="js/explore-counters.js"></script>
 <script src="js/homepage-counters.js"></script>
-<script src="features.js" defer></script>
+<script src="js/features-scroll-anim.js" defer></script>
+<script src="js/badges-scroll-anim.js" defer></script>
+
+
+
+
 <!-- Future scripts: <script src="js/footer-links.js"></script> -->
 
 

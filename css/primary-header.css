@@ -1,0 +1,177 @@
+:root {
+  --primary: #4361ee;         /* Blue (Supplier) */
+  --secondary: #3731a1;
+  --accent: #f72585;
+  --dark: #212529;
+  --light: #f8f9fa;
+  --brand-green: #2bef7d;     /* Green (Goods) */
+  --brand-blue: #2980b9;      /* Optional override for Supplier */
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.logo-green {
+  color: var(--brand-green);
+}
+
+
+.logo-blue {
+  color: var(--primary);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.primary-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1000;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: var(--dark);
+}
+
+.search-bar {
+  flex: 0.6;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  transition: all 0.3s;
+  padding-left: 45px;
+}
+
+.search-bar input:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.search-bar i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  background: transparent;
+}
+
+.action-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.delivery-btn {
+  background: rgba(67, 97, 238, 0.1);
+  color: var(--primary);
+}
+
+.language-btn {
+  position: relative;
+}
+
+.signin-btn {
+  color: var(--dark);
+}
+
+.signup-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.signup-btn:hover {
+  background: var(--secondary);
+}
+
+@media (max-width: 992px) {
+  .search-bar {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .primary-header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+  .logo-search {
+    order: 1;
+    width: 100%;
+  }
+  .header-actions {
+    order: 2;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .action-btn span {
+    display: none;
+  }
+  .action-btn {
+    padding: 10px;
+  }
+}
+
+.search-input.focused {
+  box-shadow: 0 0 8px rgba(67, 97, 238, 0.4);
+  background: rgba(0, 0, 0, 0.08);
+}

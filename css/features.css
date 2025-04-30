@@ -1,0 +1,95 @@
+/* Feature Section Background */
+.feature-section {
+  background-color: #e6f4ff; /* Light blue */
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* Section Heading */
+.feature-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 50px;
+}
+
+/* Grid for Feature Cards */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Feature Card Styling */
+.feature-card {
+  background: #d4f5dc; /* Light green */
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: opacity, transform;
+}
+
+/* On Scroll Animation Trigger */
+.feature-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Animation */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Circle */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  background-color: #00a86b;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Feature Card Title */
+.feature-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+/* Feature Card Text */
+.feature-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .feature-title {
+    font-size: 1.8rem;
+  }
+
+  .feature-card {
+    padding: 25px 20px;
+  }
+
+  .icon-box {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}

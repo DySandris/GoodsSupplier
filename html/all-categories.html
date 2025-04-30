@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Categories | GoodsSupplier</title>
+    <style>
+        /* Main Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        /* Header Styles */
+        .section-header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Category Cards */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .category-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Pakistani Section */
+        .pakistani-section .category-card {
+            background: #e6f7ee;
+            border-left: 4px solid #28a745;
+        }
+        
+        /* International Section */
+        .international-section .category-card {
+            background: #e6f0ff;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pakistani Section -->
+    <div class="section-header pakistani-section">
+        <h1>BePakistaniBuyPakistani</h1>
+        <p>Support Local Businesses & Manufacturers</p>
+    </div>
+    
+    <div class="category-grid pakistani-section">
+        <a href="#" class="category-card">Textiles & Fabrics</a>
+        <a href="#" class="category-card">Leather Goods</a>
+        <a href="#" class="category-card">Sports Goods</a>
+        <a href="#" class="category-card">Handicrafts</a>
+        <a href="#" class="category-card">Agricultural Products</a>
+        <a href="#" class="category-card">Marble & Granite</a>
+        <a href="#" class="category-card">Ceramics & Pottery</a>
+        <a href="#" class="category-card">Footwear</a>
+        <a href="#" class="category-card">Textile Machinery</a>
+        <a href="#" class="category-card">Rice & Basmati</a>
+        <a href="#" class="category-card">Spices</a>
+        <a href="#" class="category-card">Furniture</a>
+    </div>
+
+    <!-- International Section -->
+    <div class="section-header international-section">
+        <h1>DySandris</h1>
+        <p>Global Products & International Brands</p>
+    </div>
+    
+    <div class="category-grid international-section">
+        <a href="#" class="category-card">Consumer Electronics</a>
+        <a href="#" class="category-card">Smart Home Devices</a>
+        <a href="#" class="category-card">Luxury Watches</a>
+        <a href="#" class="category-card">Designer Apparel</a>
+        <a href="#" class="category-card">Cosmetics</a>
+        <a href="#" class="category-card">Automotive Parts</a>
+        <a href="#" class="category-card">Pharmaceuticals</a>
+        <a href="#" class="category-card">Solar Panels</a>
+        <a href="#" class="category-card">VR Equipment</a>
+        <a href="#" class="category-card">Fitness Equipment</a>
+        <a href="#" class="category-card">Office Supplies</a>
+        <a href="#" class="category-card">Pet Products</a>
+    </div>
+
+</body>
+</html>
